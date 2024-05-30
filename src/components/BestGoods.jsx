@@ -5,18 +5,16 @@ import { useState, useEffect } from 'react';
 
 function BestGoods() {
   const [data, setData] = useState([]);
+  
+  useEffect(()=>{
+    handleLoad()
+  },[])
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    const response = await fetch(
-      'https://panda-market-api.vercel.app/products?page=1&pageSize=4&orderBy=favorite'
-    );
-    const body = await response.json();
-    setData(body.list);
-  };
+  const handleLoad = async () => {
+    const {list} = await getData(1,4,'favorite');
+    
+    setData(list)
+  }
   return (
     <div>
       <div className="category-name">베스트 상품</div>

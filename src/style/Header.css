@@ -32,3 +32,17 @@
   border: none;
   margin-right: 100px;
 }
+
+@media screen and (max-width: 743px) and (min-width: 375px) {
+.header{
+  width: 375px;
+  height: 70px;
+}
+  .header .panda-logo{
+    margin-left: 5px;
+  }
+  .header .ul{
+    padding-left: 0px;
+  }
+  
+}
