@@ -1,0 +1,11 @@
+#register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#register-form input,
+textarea {
+  border-radius: 12px;
+  background-color: #f3f4f6;
+  border: none;
+}
