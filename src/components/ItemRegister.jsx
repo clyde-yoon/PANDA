@@ -29,9 +29,9 @@ function ItemRegister() {
   };
 
   return (
-    <div className="form-contaitner">
+    <div className="form-container">
       <form id="register-form" action="" onSubmit={handleSubmit}>
-        <div>
+        <div className="item-register-dsc">
           <span>상품 등록하기</span>
           <button type="submit">등록</button>
         </div>
@@ -42,7 +42,9 @@ function ItemRegister() {
           onChange={handleChange}
         />
         {/* --------------------상품명----------------------------- */}
-        <label htmlFor="form-item">상품명</label>
+        <label className="label-name" htmlFor="form-item">
+          상품명
+        </label>
         <input
           id="form-item"
           name="name"
@@ -53,7 +55,9 @@ function ItemRegister() {
         />
         {/* --------------------상품소개----------------------------- */}
 
-        <label htmlFor="form-exp">상품 소개</label>
+        <label className="label-name" htmlFor="form-exp">
+          상품 소개
+        </label>
         <textarea
           id="form-exp"
           name="exp"
@@ -63,7 +67,9 @@ function ItemRegister() {
           onChange={handleInputChange}
         ></textarea>
         {/* -----------------------판매 가격-------------------------- */}
-        <label htmlFor="form-price">판매 가격</label>
+        <label className="label-name" htmlFor="form-price">
+          판매 가격
+        </label>
         <input
           id="form-price"
           name="price"
@@ -73,7 +79,9 @@ function ItemRegister() {
           onChange={handleInputChange}
         />
         {/* ----------------------태그 --------------------------- */}
-        <label htmlFor="form-tag">태그</label>
+        <label className="label-name" htmlFor="form-tag">
+          태그
+        </label>
         <input
           id="form-tag"
           name="tag"

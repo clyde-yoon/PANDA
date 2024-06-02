@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import '../style/ItemRegister.css';
 
 function FileInput({ name, value, onChange }) {
   const [prevView, setPreview] = useState();
@@ -30,8 +31,20 @@ function FileInput({ name, value, onChange }) {
 
   return (
     <div>
-      <input type="file" onChange={handleChange} ref={inputRef}></input>
-      <img src={prevView} alt="" />
+      <div className="item-img">상품 이미지</div>
+      <label className="label-img" htmlFor="file-register">
+        <div className="plus">+</div>
+        <div className="label-text">이미지 등록</div>
+      </label>
+
+      <input
+        id="file-register"
+        type="file"
+        onChange={handleChange}
+        ref={inputRef}
+        style={{ display: 'none' }}
+      ></input>
+      {value && <img className="prev-img" src={prevView}></img>}
       {value && <button onClick={allClearClick}>x</button>}
     </div>
   );
